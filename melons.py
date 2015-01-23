@@ -39,9 +39,9 @@ class Cantaloupe(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
-        
-
-# If you buy 5 or more Cantaloupes, you get them all at half price (because, really, who likes Cantaloupe that much?).
+        if qty > 4:
+            cost = cost * .5
+        return cost
 
 
 class Casaba(object):
@@ -53,7 +53,6 @@ class Casaba(object):
     base_price = 6.00
 
     def get_price(self, qty):
-        # function here
         """Determine price for this quantity of melons of this type.
         Return a float of the total price.
         """
@@ -62,6 +61,7 @@ class Casaba(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class Sharlyn(object):
     species = 'Sharlyn'
@@ -80,6 +80,7 @@ class Sharlyn(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class SantaClaus(object):
     species = 'Santa Claus'
@@ -98,6 +99,7 @@ class SantaClaus(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class Christmas(object):
     species = 'Christmas'
@@ -116,6 +118,7 @@ class Christmas(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class HornedMelon(object):
     species = 'Horned melon'
@@ -134,6 +137,7 @@ class HornedMelon(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class Xigua(object):
     species = 'Xigua'
@@ -152,6 +156,7 @@ class Xigua(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
 
 class Ogen(object):
     species = 'Ogen'
@@ -170,3 +175,4 @@ class Ogen(object):
             cost = cost * 1.5 
         if self.shape != 'natural':
             cost = cost * 2
+        return cost
